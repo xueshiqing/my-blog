@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+
+    
+  <url>
+    <loc>http://yoursite.com/2018/05/13/%E4%BD%A0%E5%A5%BD%EF%BC%8CHexo/</loc>
+    <lastmod>2018-05-13T14:23:13.092Z</lastmod>
+    <data>
+        <display>
+        <title>你好，Hexo</title>
+        <pubTime>2018-05-13T14:23:13.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2018/05/13/hello-world/</loc>
+    <lastmod>2018-05-13T13:58:28.016Z</lastmod>
+    <data>
+        <display>
+        <title>Hello World</title>
+        <pubTime>2018-05-13T13:58:28.016Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+</urlset>
