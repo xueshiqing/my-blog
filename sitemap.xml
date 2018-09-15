@@ -37,6 +37,13 @@
   </url>
   
   <url>
+    <loc>http://yoursite.com/links/index.html</loc>
+    
+    <lastmod>2018-05-13T15:33:24.412Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/repository/index.html</loc>
     
     <lastmod>2018-05-13T15:33:24.412Z</lastmod>
@@ -45,13 +52,6 @@
   
   <url>
     <loc>http://yoursite.com/tags/index.html</loc>
-    
-    <lastmod>2018-05-13T15:33:24.412Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/links/index.html</loc>
     
     <lastmod>2018-05-13T15:33:24.412Z</lastmod>
     
