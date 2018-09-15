@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2018/09/15/2_%E4%BD%BF%E7%94%A8kubeadm%E6%90%AD%E5%BB%BAkubernetes%E9%9B%86%E7%BE%A4/</loc>
+    
+    <lastmod>2018-09-15T14:22:19.861Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2018/06/02/1_OpenStack%E5%8D%95%E8%8A%82%E7%82%B9%E5%AE%89%E8%A3%85/</loc>
     
     <lastmod>2018-06-02T05:25:44.115Z</lastmod>
