@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/about/index.html</loc>
+    
+    <lastmod>2018-09-15T09:33:40.777Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2018/06/02/1_OpenStack%E5%8D%95%E8%8A%82%E7%82%B9%E5%AE%89%E8%A3%85/</loc>
     
     <lastmod>2018-06-02T05:25:44.115Z</lastmod>
@@ -10,13 +17,6 @@
   
   <url>
     <loc>http://yoursite.com//404.html</loc>
-    
-    <lastmod>2018-05-13T15:33:24.412Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/about/index.html</loc>
     
     <lastmod>2018-05-13T15:33:24.412Z</lastmod>
     
