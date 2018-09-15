@@ -9,6 +9,55 @@
   </url>
   
   <url>
+    <loc>http://yoursite.com//404.html</loc>
+    
+    <lastmod>2018-05-13T15:33:24.412Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/about/index.html</loc>
+    
+    <lastmod>2018-05-13T15:33:24.412Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/books/index.html</loc>
+    
+    <lastmod>2018-05-13T15:33:24.412Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/categories/index.html</loc>
+    
+    <lastmod>2018-05-13T15:33:24.412Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/repository/index.html</loc>
+    
+    <lastmod>2018-05-13T15:33:24.412Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/links/index.html</loc>
+    
+    <lastmod>2018-05-13T15:33:24.412Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/tags/index.html</loc>
+    
+    <lastmod>2018-05-13T15:33:24.412Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2018/05/13/%E4%BD%A0%E5%A5%BD%EF%BC%8CHexo/</loc>
     
     <lastmod>2018-05-13T14:23:13.092Z</lastmod>
