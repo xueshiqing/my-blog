@@ -4,12 +4,12 @@
 
     
   <url>
-    <loc>http://yoursite.com/2018/09/16/2_%E4%BD%BF%E7%94%A8kubeadm%E6%90%AD%E5%BB%BAkubernetes%E9%9B%86%E7%BE%A4/</loc>
-    <lastmod>2018-09-16T05:08:21.395Z</lastmod>
+    <loc>http://yoursite.com/2018/10/08/3_%E4%BD%BF%E7%94%A8kubeadm%E5%BF%AB%E9%80%9F%E8%B0%83%E8%AF%95kubernetes%E6%BA%90%E4%BB%A3%E7%A0%81/</loc>
+    <lastmod>2018-10-08T15:02:51.466Z</lastmod>
     <data>
         <display>
-        <title>使用kubeadm搭建kubernetes集群</title>
-        <pubTime>2018-09-16T05:08:21.447Z</pubTime>
+        <title>使用kubeadm快速调试kubernetes源代码</title>
+        <pubTime>2018-10-08T15:33:15.885Z</pubTime>
         
         <tag>kubernetes</tag>
          
@@ -21,12 +21,29 @@
 
     
   <url>
-    <loc>http://yoursite.com/2018/06/02/1_OpenStack%E5%8D%95%E8%8A%82%E7%82%B9%E5%AE%89%E8%A3%85/</loc>
+    <loc>http://yoursite.com/2018/10/08/2_%E4%BD%BF%E7%94%A8kubeadm%E6%90%AD%E5%BB%BAkubernetes%E9%9B%86%E7%BE%A4/</loc>
+    <lastmod>2018-09-16T05:08:21.395Z</lastmod>
+    <data>
+        <display>
+        <title>使用kubeadm搭建kubernetes集群</title>
+        <pubTime>2018-10-08T14:29:05.109Z</pubTime>
+        
+        <tag>kubernetes</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2018/10/08/1_OpenStack%E5%8D%95%E8%8A%82%E7%82%B9%E5%AE%89%E8%A3%85/</loc>
     <lastmod>2018-06-02T05:25:44.115Z</lastmod>
     <data>
         <display>
         <title>OpenStack单节点安装</title>
-        <pubTime>2018-06-02T05:25:44.115Z</pubTime>
+        <pubTime>2018-10-08T14:29:05.116Z</pubTime>
         
         <tag>OpenStack</tag>
          
@@ -59,12 +76,12 @@
 
     
   <url>
-    <loc>http://yoursite.com/2018/05/13/hello-world/</loc>
+    <loc>http://yoursite.com/2018/10/08/hello-world/</loc>
     <lastmod>2018-05-13T13:58:28.016Z</lastmod>
     <data>
         <display>
         <title>Hello World</title>
-        <pubTime>2018-05-13T13:58:28.016Z</pubTime>
+        <pubTime>2018-10-08T14:29:05.124Z</pubTime>
         
          
            
