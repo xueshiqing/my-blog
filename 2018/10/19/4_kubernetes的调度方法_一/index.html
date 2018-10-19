@@ -26,15 +26,15 @@
 <meta property="og:site_name" content="Xue&#39;s Homepage">
 <meta property="og:description" content="kubernetes的调度方法参考文献《kubernetes权威指南——从Docker到kubernetes实践全接触》 http://dockone.io/article/2885 作者：薛世卿注：本文包含了对kubernetes调度器的调度策略、优选部分的介绍。 背景介绍Kubernetes的架构设计基本上是参照了Google Borg。Google的Borg系统群集管理器负责管理几十万个以上">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="http://yoursite.com/2018/10/19/4_kubernetes的调度方法_一/images/4_0_1.png">
-<meta property="og:image" content="http://yoursite.com/2018/10/19/4_kubernetes的调度方法_一/images/4_0_2.png">
-<meta property="og:image" content="http://yoursite.com/2018/10/19/4_kubernetes的调度方法_一/images/4_0_3.png">
-<meta property="og:image" content="http://yoursite.com/2018/10/19/4_kubernetes的调度方法_一/images/4_0_4.png">
-<meta property="og:updated_time" content="2018-10-19T15:00:16.798Z">
+<meta property="og:image" content="http://yoursite.com/images/4_0_1.png">
+<meta property="og:image" content="http://yoursite.com/images/4_0_2.png">
+<meta property="og:image" content="http://yoursite.com/images/4_0_3.png">
+<meta property="og:image" content="http://yoursite.com/images/4_0_4.png">
+<meta property="og:updated_time" content="2018-10-19T15:07:31.212Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="kubernetes的调度方法_一">
 <meta name="twitter:description" content="kubernetes的调度方法参考文献《kubernetes权威指南——从Docker到kubernetes实践全接触》 http://dockone.io/article/2885 作者：薛世卿注：本文包含了对kubernetes调度器的调度策略、优选部分的介绍。 背景介绍Kubernetes的架构设计基本上是参照了Google Borg。Google的Borg系统群集管理器负责管理几十万个以上">
-<meta name="twitter:image" content="http://yoursite.com/2018/10/19/4_kubernetes的调度方法_一/images/4_0_1.png">
+<meta name="twitter:image" content="http://yoursite.com/images/4_0_1.png">
   <!-- Canonical links -->
   <link rel="canonical" href="http://yoursite.com/2018/10/19/4_kubernetes的调度方法_一/index.html">
   
@@ -387,7 +387,7 @@
 <h2 id="背景介绍"><a href="#背景介绍" class="headerlink" title="背景介绍"></a>背景介绍</h2><p>Kubernetes的架构设计基本上是参照了Google Borg。Google的Borg系统群集管理器负责管理几十万个以上的jobs，来自几千个不同的应用，跨多个集群，每个集群有上万个机器。它通过管理控制、高效的任务包装、超售、和进程级别性能隔离实现了高利用率。它支持高可用性应用程序与运行时功能，最大限度地减少故障恢复时间，减少相关故障概率的调度策略。</p>
 <p>基于资源分配的任务调度是Kubernetes的核心组件。Kubernetes的调度策略源自Borg, 但是为了更好的适应新一代的容器应用，以及各种规模的部署，Kubernetes的调度策略相应做的更加灵活，也更加容易理解和使用。</p>
 <p>Kubernetes基本架构如下：</p>
-<p><img src="images/4_0_1.png" alt=""></p>
+<p><img src="/images/4_0_1.png" alt=""></p>
 <p>其中， Controller Manager主要用于管理计算节点（Node Controller）以及Pod副本（Replication Controller）等，Scheduler根据特定的算法和策略调度Pod到具体的计算节点，Kubelet通过apiserver或者监控本地的配置文件（eg. Kubeadm创建的Kuernetes集群），通过docker daemon创建Pod的container。</p>
 <h2 id="调度策略"><a href="#调度策略" class="headerlink" title="调度策略"></a>调度策略</h2><p>Kubernetes的调度器以插件化形式实现的，方便用户定制和二次开发。用户可以自定义调度器并以插件形式与Kubernetes集成，或集成其他调度器，便于调度不同类型的任务。</p>
 <p>Kubernetes调度器的源码位于kubernetes/plugin/中，大体的代码目录结构如下所示：</p>
@@ -417,7 +417,7 @@
 <li>所选节点对于的kubelet根据调度结果执行Pod创建操作。</li>
 </ol>
 <p>Kubernetes调度器使用Predicates和Priorites来决定一个Pod应该运行在哪一个节点上。Predicates是强制性规则，用来形容主机匹配Pod所需要的资源，如果没有任何主机满足该Predicates，则该Pod会被挂起，直到有节点能够满足调度条件。</p>
-<p><img src="images/4_0_2.png" alt=""></p>
+<p><img src="/images/4_0_2.png" alt=""></p>
 <h2 id="优选"><a href="#优选" class="headerlink" title="优选"></a>优选</h2><p>经过预选策略（Predicates）对节点过滤后，获取节点列表，再对符合需求的节点列表进行打分，最终选择Pod调度到一个分值最高的节点。Kubernetes用一组优先级函数处理每一个通过预选的节点（kubernetes/plugin/pkg/scheduler/algorithm/priorities中实现）。每一个优先级函数会返回一个0-10的分数，分数越高表示节点越优， 同时每一个函数也会对应一个表示权重的值。这好比有许多评委同时对节点进行打分，不同的评委有着不同的权重，最终主机的得分用以下公式计算得出：</p>
 <pre><code>finalScoreNode = (weight1 * priorityFunc1) + (weight2 * priorityFunc2) + … + (weightn * priorityFuncn)
 </code></pre><p>对应代码位于kubernetes/plugin/pkg/scheduler/core/generic_scheduler.go[650],combinedScores即为节点总分。</p>
@@ -445,7 +445,7 @@ for _, extender := range extenders {
 }
 </code></pre><p>目前支持优选的优先级函数包括以下几种：<br>LeastRequestedPriority：节点的优先级就由节点空闲资源与节点总容量的比值，即由（总容量-节点上Pod的容量总和-新Pod的容量）/总容量）来决定。CPU和内存具有相同权重，资源空闲比越高的节点得分越高。需要注意的是，这个优先级函数起到了按照资源消耗来跨节点分配Pod的作用。详细的计算规则如下：</p>
 <pre><code>cpu((capacity – sum(requested)) * 10 / capacity) + memory((capacity – sum(requested)) * 10 / capacity) / 2
-</code></pre><p><img src="images/4_0_3.png" alt=""></p>
+</code></pre><p><img src="/images/4_0_3.png" alt=""></p>
 <p>注：10 表示非常合适，0 表示完全不合适。</p>
 <p>LeastRequestedPriority举例说明：例如CPU的可用资源为100，运行容器申请的资源为15，则cpu分值为8.5分，内存可用资源为100，运行容器申请资源为20，则内存分支为8分。则此评价规则在此节点的分数为(8.5 +8) / 2 = 8.25分。</p>
 <ul>
@@ -468,7 +468,7 @@ for _, extender := range extenders {
 <li>MostRequestedPriority : 在 ClusterAutoscalerProvider 中，替换 LeastRequestedPriority，给使用多资源的节点，更高的优先级。计算公式为：(cpu(10 sum(requested) / capacity) + memory(10 sum(requested) / capacity)) / 2</li>
 </ul>
 <p>要想获得所有节点最终的权重分值，就要先计算每个优先级函数对应该节点的分值，然后计算总和。因此不管过程如何，如果有 N 个节点，M 个优先级函数，一定会计算 M*N 个中间值，构成一个二维表格：</p>
-<p><img src="images/4_0_4.png" alt=""></p>
+<p><img src="/images/4_0_4.png" alt=""></p>
 <p>最后，会把表格中按照节点把优先级函数的权重列表相加，得到最终节点的分值。上面代码就是这个过程，中间过程可以并发计算，以加快速度。</p>
 <h2 id="优选算法实例"><a href="#优选算法实例" class="headerlink" title="优选算法实例"></a>优选算法实例</h2><p>我们以taint_toleration.go[55]为例来看一看</p>
 <pre><code>// ComputeTaintTolerationPriorityMap prepares the priority list for all the nodes based on the number of intolerable taints on the node
